@@ -26,11 +26,19 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  function addTransaction(transaction) {
+    dispatch({
+      type: "ADD",
+      payload: transaction,
+    });
+  }
+
   return (
     <GlobalContext.Provider
       value={{
         transactions: state.transactions,
         deleteTransaction,
+        addTransaction,
       }}
     >
       {children}
