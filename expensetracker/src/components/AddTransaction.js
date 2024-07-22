@@ -13,7 +13,7 @@ const AddTransaction = () => {
     const newTransaction = {
       id: Math.random(),
       text,
-      amount,
+      amount: +amount,
     };
 
     addTransaction(newTransaction);
